@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chanel Navbar with Country Selector</title>
+    <link rel="stylesheet" href="./chanel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./img/logo.png" alt="Chanel Logo">
+        </div>
+        <div class="nav-icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-globe" onclick="openModal()"></i>
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Shipping to</h2>
+            <p>Delivery options may vary for different locations</p>
+            <div class="location-select">
+                <label for="location">Choose Location</label>
+                <input type="text" id="location" placeholder="Location" readonly>
+                <div class="location-list">
+                    <div onclick="selectCountry('Angola')">Angola</div>
+                    <div onclick="selectCountry('Anguilla')">Anguilla</div>
+                    <div onclick="selectCountry('Antigua and Barbuda')">Antigua and Barbuda</div>
+                    <div onclick="selectCountry('Argentina')">Argentina</div>
+                    <div onclick="selectCountry('Aruba')">Aruba</div>
+                    <div onclick="selectCountry('Azerbaijan')">Azerbaijan</div>
+                    <div onclick="selectCountry('United States')">United States</div>
+                    <div onclick="selectCountry('Canada')">Canada</div>
+                    <div onclick="selectCountry('United Kingdom')">United Kingdom</div>
+                    <div onclick="selectCountry('Australia')">Australia</div>
+                    <div onclick="selectCountry('Germany')">Germany</div>
+                    <div onclick="selectCountry('France')">France</div>
+                    <div onclick="selectCountry('Italy')">Italy</div>
+                    <div onclick="selectCountry('Spain')">Spain</div>
+                    <div onclick="selectCountry('China')">China</div>
+                    <div onclick="selectCountry('Japan')">Japan</div>
+                    <div onclick="selectCountry('South Korea')">South Korea</div>
+                    <div onclick="selectCountry('India')">India</div>
+                    <div onclick="selectCountry('Brazil')">Brazil</div>
+                    <div onclick="selectCountry('Mexico')">Mexico</div>
+                    <div onclick="selectCountry('Russia')">Russia</div>
+                    <div onclick="selectCountry('South Africa')">South Africa</div>
+                    <div onclick="selectCountry('Nigeria')">Nigeria</div>
+                    <div onclick="selectCountry('Egypt')">Egypt</div>
+                    <div onclick="selectCountry('Turkey')">Turkey</div>
+                    <div onclick="selectCountry('Saudi Arabia')">Saudi Arabia</div>
+                    <div onclick="selectCountry('Argentina')">Argentina</div>
+                    <div onclick="selectCountry('Chile')">Chile</div>
+                    <div onclick="selectCountry('Colombia')">Colombia</div>
+                    <div onclick="selectCountry('Peru')">Peru</div>
+                    <div onclick="selectCountry('Venezuela')">Venezuela</div>
+                    <div onclick="selectCountry('Malaysia')">Malaysia</div>
+                    <div onclick="selectCountry('Indonesia')">Indonesia</div>
+                    <div onclick="selectCountry('Thailand')">Thailand</div>
+                    <div onclick="selectCountry('Vietnam')">Vietnam</div>
+                    <div onclick="selectCountry('Philippines')">Philippines</div>
+                    <div onclick="selectCountry('Singapore')">Singapore</div>
+                    <div onclick="selectCountry('Pakistan')">Pakistan</div>
+                    <div onclick="selectCountry('Bangladesh')">Bangladesh</div>
+                    <div onclick="selectCountry('Sri Lanka')">Sri Lanka</div>
+                    <div onclick="selectCountry('Nepal')">Nepal</div>
+                    <div onclick="selectCountry('New Zealand')">New Zealand</div>
+                    <div onclick="selectCountry('Netherlands')">Netherlands</div>
+                    <div onclick="selectCountry('Belgium')">Belgium</div>
+                    <div onclick="selectCountry('Sweden')">Sweden</div>
+                    <div onclick="selectCountry('Norway')">Norway</div>
+                    <div onclick="selectCountry('Denmark')">Denmark</div>
+                    <div onclick="selectCountry('Finland')">Finland</div>
+                    <div onclick="selectCountry('Switzerland')">Switzerland</div>
+                    <div onclick="selectCountry('Austria')">Austria</div>
+                    <div onclick="selectCountry('Poland')">Poland</div>
+                    <div onclick="selectCountry('Greece')">Greece</div>
+                    <div onclick="selectCountry('Portugal')">Portugal</div>
+                    <div onclick="selectCountry('Czech Republic')">Czech Republic</div
+                    <!-- Add more countries as needed -->
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+                <button class="confirm-btn" onclick="confirmLocation()">Confirm</button>
+            </div>
+        </div>
+    </div>
+    <div id="current-location" class="current-location"></div>
+
+    <div class="container1">
+        <div class="content1">
+            <h1>ЭКСКЛЮЗИВНАЯ <br> ПАРФЮМЕРИЯ</h1>
+            <p>ЛИМИТИРОВАННЫЕ И ЭКСКЛЮЗИВНЫЕ ЗАПУСКИ, <br>ПРОДУКТЫ ДОСТУПНЫЕ ТОЛЬКО В ОНЛАЙН-БУТИКЕ И В <br> БУТИКАХ CHANEL. УЗНАЙТЕ ПОДРОБНЕЕ ОБ <br> ЭКСКЛЮЗИВНЫХ АРОМАТАХ, КОТОРЫЕ ВЫ БОЛЬШЕ <br> НИГДЕ НЕ НАЙДЕТЕ.</p>
+            <button class="btn1">ПОДРОБНЕЕ</button>
+        </div>
+        <div class="images1">
+            <img src="./img/parfume-home.png" alt="Chanel Perfume">
+        </div>
+    </div>
+   
+    <div class="container2">
+        <div class="text-content">
+          <br> <br>  <h1>КОКО ШАНЕЛЬ</h1> <br> <br>
+            <h2>«ПУСТЬ МИФ ОБО МНЕ НЕ УМРЕТ НИКОГДА. <br> ЖЕЛАЮ ЕМУ СВЕТЛОГО БУДУЩЕГО!»</h2> <br>
+         
+            
+          <br> <br>  <div class="text-2"> 
+                <p>ГАБРИЭЛЬ ШАНЕЛЬ СТРОИЛА СВОЮ ЖИЗНЬ ТАК, КАК ЕЙ НРАВИЛОСЬ. ЛИШЕНИЯ, ВЫПАВШИЕ НА ДОЛЮ СИРОТЫ, И УСПЕШНАЯ КАРЬЕРА БИЗНЕС-ЛЕДИ СФОРМИРОВАЛИ ЕЕ УНИКАЛЬНЫЙ, ДЕРЗКИЙ И СВОБОДОЛЮБИВЫЙ ХАРАКТЕР, КОТОРЫЙ НАМНОГО ОПЕРЕЖАЛ СВОЕ ВРЕМЯ. ЛЮБОВЬ И ПОДДЕРЖКА ВЕРНЫХ ДРУЗЕЙ И ПОКЛОННИКОВ, ИНТЕРЕС К КУЛЬТУРЕ,
+                 ЖАЖДА НОВЫХ ОТКРЫТИЙ И СТРАСТЬ К ПУТЕШЕСТВИЯМ ОПРЕДЕЛИЛИ СТАНОВЛЕНИЕ ЕЕ ЛИЧНОСТИ. ПОДАРИВ ЖЕНЩИНАМ НОВЫЙ СТИЛЬ, СВОБОДНЫЙ ОТ ПРЕДРАССУДКОВ И ИЗЛИШЕСТВ, И НАПОЛНИВ ЕГО СВЕЖИМИ АКЦЕНТАМИ, ПОЗАИМСТВОВАННЫМИ ИЗ МУЖСКОГО ГАРДЕРОБА, КОКО ШАНЕЛЬ СОЗДАЛА ОСОБОЕ ВИДЕНИЕ ЭЛЕГАНТНОСТИ – НЕПОДВЛАСТНОЕ ВРЕМЕНИ И ВМЕСТЕ С
+                  ТЕМ ОЧЕНЬ СОВРЕМЕННОЕ. НЕПРИНУЖДЕННО НАБРОШЕННОЕ НА ШЕЮ НИТИ ЖЕМЧУГА, СВЕРКАЮЩИЕ БРИЛЛИАНТЫ УКРАШЕНИЯ И, КОНЕЧНО, ЛЕГЕНДАРНЫЕ АРОМАТЫ СТАЛИ СИНОНИМОМ БЕЗУПРЕЧНОГО СТИЛЯ. НЕСМОТРЯ НА ПРОШЕДШИЕ ГОДЫ, ОБРАЗ И ИМЯ ЭТОЙ ВЕЛИКОЙ ЖЕНЩИНЫ В АВАНГАРДЕ МОДЫ, ЧЕЙ ОБРАЗ ЖИЗНИ И ЧУВСТВО НАРЯДНОСТИ ЛЕГЛИ В ОСНОВУ
+                   ФИЛОСОФИИ И ЦЕННОСТЕЙ ДОМА МОДЫ, КОТОРЫЙ ОН ПЕРЕД ДНЯ ВДОХНОВЛЯЕТ ЖЕНЩИН ПО ВСЕМУ МИРУ.</p>
+     
+        <div class="image-content">
+            <img src="./img/coco-chanel.png" alt="Коко Шанель">
+        </div>
+        </div>
+    </div> <br> <br> <br>
+    
+  
+    <div class="container">
+
+     
+        <div class="perfume">
+            <img src="./img/parfume2.png" alt="Chanel No. 5" class="perfume-image">
+            <button class="details-button">ПОДРОБНЕЕ</button>
+        </div>
+  
+
+        <div class="perfume4">
+            <div>
+            <img src="./img/parfume1.png" alt="Chanel No. 5" class="perfume-image" style="width: 150px;">
+            <button class="details-button">ПОДРОБНЕЕ</button>
+            </div>
+           <div>
+            <h1 class="chanel55">CHANEL N°5</h1>
+           </div>
+           <div class="perfume">
+            <img src="./img/parfume3.png" alt="Chanel No. 5" class="perfume-image"  >
+            <button class="details-button">ПОДРОБНЕЕ</button>
+        </div>
+  
+        </div>
+
+        <div class="parfume5">
+        <div class="perfume">
+            <img src="./img/parfume4.png" alt="Chanel No. 5" class="perfume-image">
+            <button class="details-button">ПОДРОБНЕЕ</button>
+        </div>
+        <div class="perfume">
+            <img src="./img/parfume5.png" alt="Chanel No. 5" class="perfume-image">
+            <button class="details-button">ПОДРОБНЕЕ</button>
+        </div>
+    </div>
+    <br> <br> <br>
+   </div>
+
+
+   <div class="box">
+    <br> <br> <br> <br>
+    <div class="text-contento">
+        <h1>COCO MADEMOISELLE</h1>
+        <p>ДЕЛИКАТНАЯ АРОМАТИЧЕСКАЯ ВОДА COCO MADEMOISELLE L’EAU PRIVÉE. САМА СУТЬ СВОБОДНОЙ И СМЕЛОЙ ЖЕНЩИНЫ. НЕЖНАЯ И ЧУВСТВЕННАЯ ФРУКТОВАЯ ВОСТОЧНАЯ КОМПОЗИЦИЯ СПЕЦИАЛЬНО СОЗДАНА ДЛЯ НАНЕСЕНИЯ ПЕРЕД СНОМ.</p>
+        <p>НА ФОНЕ ЦВЕТОЧНОГО АККОРДА АБСОЛЮ ЖАСМИНА И НОТ ЛЕПЕСТКОВ РОЗЫ ЯРКО ВЫДЕЛЯЮТСЯ САМЫЕ ЧУВСТВЕННЫЕ И НЕЖНЫЕ МУСКУСНЫЕ НОТЫ COCO MADEMOISELLE.</p>
+        <button class="add-to-cart-button">ДОБАВИТЬ В КОРЗИНУ</button>
+    </div>
+    <div class="image-contento">
+        <img src="./img/cocomadmaziolle.png" alt="Coco Mademoiselle">
+    </div>
+</div>
+
+<div class="box">
+    <br> <br> <br> <br>
+    
+    <div class="image-contento">
+        <img src="./img/leauparfume.png" alt="Coco Mademoiselle">
+    </div>
+
+    <div class="text-contento">
+        <h1>N°5 L'EAU</h1>
+        <p>N°5 L'EAU – это абстрактный цветочный полный жизни аромат.</p>
+       <p>В верхних нотах цитрусовые устремляются ввысь, увлекаемые альдегидами, затем возникает цветочный вихрь жасмина, розы, иланг-иланга и, наконец, проявляют свою энергию ветивер и кедр.</p>
+        <button class="add-to-cart-button">ДОБАВИТЬ В КОРЗИНУ</button>
+    </div>
+</div>
+
+<div class="box">
+    <br> <br> <br> <br>
+    <div class="text-contento">
+        <h1>N°5 ДУХИ</h1>
+      <p>N°5 – это абстрактная композиция.</p>
+      <p>Цветочный букет, в котором угадываются майская роза и жасмин из Грасса, взмывающие ввысь под напором альдегидов.</p>
+        <button class="add-to-cart-button">ДОБАВИТЬ В КОРЗИНУ</button>
+    </div>
+    <div class="image-contento">
+        <img src="./img/parfume7.png" alt="Coco Mademoiselle">
+    </div>
+</div>
+
+<div class="box">
+    <br> <br> <br> <br>
+    
+    <div class="image-contento">
+        <img src="./img/parfume8.png" alt="Coco Mademoiselle">
+    </div>
+
+    <div class="text-contento">
+        <h1>N°5 ПАРФЮМЕРНАЯ ВОДА</h1>
+        <p>Парфюмерная вода N°5 имеет общий ольфакторный почерк с духами.</p>
+       <p>
+        В альдегидный цветочный букет вплетаются ноты цитрусовых и чувственная ваниль.</p>
+        <button class="add-to-cart-button">ДОБАВИТЬ В КОРЗИНУ</button>
+    </div>
+</div>
+
+<div class="box">
+    <br> <br> <br> <br>
+    <div class="text-contentt">
+        <h1>N°5 EAU PREMIÈRE</h1>
+      <p>N°5 EAU PREMIÈRE имеет общий ольфакторный почерк с духами. </p>
+      <p>
+        Сквозь прозрачные жасминовые ноты его цветочного букета проявляет <br> свое благоухание иланг-иланг с Коморских островов. </p>
+        <button class="add-to-cart-button">ДОБАВИТЬ В КОРЗИНУ</button>
+    </div>
+    <div class="image-contentt">
+        <img src="./img/parfume9.png" alt="Coco Mademoiselle" style="width: 400px;">
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-content">
+        <img src="./img/fotterlogo.png" alt="">
+        <ul class="footer-links">
+            <li><a href="#">дом chanel</a></li> <br>
+            <li><a href="#">услуги бутика</a></li><br>
+            <li><a href="#">онлайн-услуги</a></li><br>
+            <li><a href="#">познакомиться с chanel.com</a></li>
+        </ul>
+    </div>
+</footer>
+
+    <script src="./chanel.js"></script>
+</body>
+</html>
+
